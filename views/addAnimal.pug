@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .container.form_content
+        h2.text-center Add a new animal
+
+        form(method='POST', action="/animals/add")
+            #form-group
+                label Name:
+                input.form-control(name='type', type='text' required)
+            #form-group
+                label Color:
+                input.form-control(name='color', type='text' required)
+            input.btn.btn-dark.btn-lg.mt-3.btn-block(type='submit', value='submit')
+            

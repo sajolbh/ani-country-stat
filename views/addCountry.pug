@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .container.form_content
+        h2.text-center Add a new country
+        form(method='POST', action="/countries/add")
+            #form-group
+                label Country Name:
+                input.form-control(name='country_name', type='text', required)
+            #form-group
+                label Age:
+                input.form-control(name='age', type='number', min=1, required)
+            input.btn.btn-dark.btn-lg.mt-3.btn-block(type='submit', value='submit')
+    
+            

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    ul.listgroup
+        if animals.length >0
+            each animal, a in animals
+                li.list-group-item.d-flex.justify-content-between.align-items-center
+                    span
+                        h2= animal.type
+                        p= animal.color
+                    span
+                        a.btn.btn-danger.delete-animal(href="#", data-id=animal._id) Delete
+        else
+            .h1.text-center No animals in the database

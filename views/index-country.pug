@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    if countries.length > 0
+        ul.listgroup
+            each country, c in countries
+                li.list-group-item.d-flex.justify-content-between.align-items-center
+                    span
+                        h2= country.name
+                        span.badge.badge-dark 
+                            =country.age + " years old"
+                        if country.animals.length > 0
+                            h6 Animals present in the country are:
+                            each animal, a in country.animals
+                                span=animal + ", "
+                    span
+                        a.btn.btn-warning.edit-country.mr-2(href="countries/edit/" + country._id) Add animals
+                        a.btn.btn-danger.delete-country(href="#", data-id=country._id) Delete
+    else
+        .h1.text-center No countries in the database
+

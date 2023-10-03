@@ -1,0 +1,30 @@
+doctype doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Animal-Country Stat
+        link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet" href="/css/main.css")
+
+    body
+        .container.main_content
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                #navbarNavAltMarkup.navbar-nav
+                    a.nav-item.nav-link(href="/") See all animals
+                    a.nav-item.nav-link(href="/countries/add") Register a country
+                    a.nav-item.nav-link(href="/animals/add") Register a animal
+                    a.nav-item.nav-link(href="/countries") See all countries
+            br
+            block content
+
+
+    script(src="/bower_components/jquery/dist/jquery.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+    script(src="/js/main.js")
+    script(src="/js/delete-country.js")
+
+   
+
+
+    
+
